@@ -1,0 +1,37 @@
+[
+    {
+      "id": 101,
+      "wins": 10,
+      "losses": 3,
+      "points_scored": 7,
+      "name": ouro
+    },
+    {
+      "id": 231,
+      "wins": 1,
+      "losses": 10,
+      "points_scored": 2,
+      "name": djene
+    },
+    {
+      "id": 145,
+      "wins": 5,
+      "losses": 1,
+      "points_scored": 14,
+      "name": nane
+    },
+    {
+      "id": 45,
+      "wins": 6,
+      "losses": 2,
+      "points_scored": 2,
+      "name": tchakei
+    },
+    {
+      "id": 27,
+      "wins": 14,
+      "losses": 26,
+      "points_scored": 28,
+      "name": tchadenou
+    }
+  ]
