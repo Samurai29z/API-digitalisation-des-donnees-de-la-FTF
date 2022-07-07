@@ -20,6 +20,7 @@ const getStats = async (req, res, next) => {
 
 
 
+
 const createStats = async (req, res, next) => {
     try {
       const data = fs.readFileSync(statsFilePath);
@@ -40,6 +41,7 @@ const createStats = async (req, res, next) => {
       next(e);
     }
 };
+
 
 
 const updateStats = async (req, res, next) => {
@@ -74,6 +76,7 @@ const updateStats = async (req, res, next) => {
       next(e);
     }
 };
+
 
 const deleteStats = async (req, res, next) => {
     try {
