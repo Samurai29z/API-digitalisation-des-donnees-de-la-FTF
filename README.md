@@ -2,27 +2,32 @@
 
 notre projet consiste a cree un API REST pour la gestion des statistiques des joueurs de l equipe nationnale de football
 
-PRE-REQUIS
+## **`PRE-REQUIS`**
 
  -  savoir installer node js
  - savoir installer nvm Node Version Manager
  -savoir installer npm Node Package Manager 
  -savoir utiliser le framework Express
 
- INSTALLATION
+ ## **`INSTALLATION`**
 
- -cliquez sur le lien (https://nodejs.org/en/download/) choisir la bonne version node adapter a votre machine telecharger et intaller
- aller dans terminal taper (node --version)pour etre sur de l avoir installer et connaitre la version
+ - cliquez sur le lien **[Node.JS](https://nodejs.org/en/)** choisir la bonne version node adapter a votre machine, telecharger et intaller
+ 
+ aller dans terminal taper `node --version` pour etre sur de l avoir installer et connaitre la version
 
- -installer npm : taper la commande (npm install download) pour installer npm (npm --version)pour connaitre la version
+ - installer npm : taper la commande `npm install download` pour installer
+ 
+ `npm --version`  pour connaitre la version
 
 
- DEMARAGE
+ ## **`DEMARAGE`**
 
- -creer votre dossier sur le bureau ,l ouvrir dans le terminal,(npm init) pour demarer l installation du package ,suivre les etapes en appuiyant (ENTER) a chaque fois
- -installation du framework EXPRESS:(npm install express body-parser morgan)
--creer un fichier index.js dans lequel on copie tout le code entre les guillaumets:
-<
+ - creer votre dossier sur le bureau ,l'ouvrir dans le terminal,
+ `npm init` pour demarer l installation du package ,suivre les etapes en appuiyant (ENTER) a chaque fois
+ - Installation du framework EXPRESS(**_npm install express body-parser morgan_**)
+- creer un fichier index.js dans lequel on copie
+
+```js
 const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
@@ -64,19 +69,95 @@ app.listen(PORT, () => {
   );
 });
 }
->
--creer un dossier appeler ROUTES
--creer dans le dossier un fichier STATS.JSON
--un autre appelle STATS.JS
--ajouter le script entre les parentheses au fichier packages.json
+```
+- crée un dossier appeler ROUTES
+
+- crée dans le dossier un fichier STATS.JSON
+
+![This is an image](Capture28.png)
+- crée un autre appelle STATS.JS
+![This is an image](Capture49.png)
+-ajouter le script suivant au fichier packages.json
+```
  ("scripts": {
   "start": "node index.js"
 },)
--executer la commande (npm start) dans le dossier
--on nous envera un message
-(Express Server started on Port 3000 | Environment : development
-)
--l API est pret a etre tester avec POSTMAN ou heberger sur HEROKU
+```
+![This is an image](Capture55.png)
+- executer la commande `npm start` dans le dossier
+- on nous envera un message
+(**_Express Server started on Port 3000 | Environment : development_**)
+- l API est pret a etre tester avec POSTMAN une fois heberger sur HEROKU ou tester en local avec localhost
+## **`test avc postman avec lien heroku`** 
+
+
+  - POST https://playerstats-api.herokuapp.com/api/v1/stats 
+    -  This will create the stats a player
+
+    ```json
+    // this is the input examples
+      {
+        "id": 23,
+        "wins": 8,
+        "losses": 2,
+        "points_scored": 7
+      }
+    // and it will return json file like this
+      {
+        "id": 23,
+        "wins": 8,
+        "losses": 2,
+        "points_scored": 7
+      }
+    ```
+
+
+  - GET https://playerstats-api.herokuapp.com/api/v1/stats/23 
+    - This will get the stats for player 23
+
+    ```json
+    // it will return json file like this
+      {
+        "id": 23,
+        "wins": 8,
+        "losses": 2,
+        "points_scored": 7
+      }
+    ```
+    
+  - PUT https://playerstats-api.herokuapp.com/api/v1/stats/23 
+    - This will update the stats for player 101
+
+    ```json
+    // this the input 
+      {
+        "id": 23,
+        "wins": 10,
+        "losses": 3,
+        "points_scored": 7
+      }
+    // and it will return json file like this
+    {
+        "id": 23,
+        "wins": 10,
+        "losses": 3,
+        "points_scored": 7
+      }
+    ```
+
+  - DELETE https://playerstats-api.herokuapp.com/api/v1/stats/23
+    -  This will delete the stats for player 101
+
+    ```json
+    // this the input 
+      {
+        "id": 101,
+        "wins": 10,
+        "losses": 3,
+        "points_scored": 7
+      }
+    // and it will return an empty json file
+    ```
 
 
 
