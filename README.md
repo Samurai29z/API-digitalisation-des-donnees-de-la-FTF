@@ -92,17 +92,17 @@ app.listen(PORT, () => {
 
 
   - POST https://playerstats-api.herokuapp.com/api/v1/stats 
-    -  This will create the stats a player
+    -  Cela créera les statistiques d'un joueur
 
     ```json
-    // this is the input examples
+    // ce sont les exemples d'entrée
       {
         "id": 23,
         "wins": 8,
         "losses": 2,
         "points_scored": 7
       }
-    // and it will return json file like this
+    // il renverra un fichier json comme celui-ci
       {
         "id": 23,
         "wins": 8,
@@ -113,10 +113,10 @@ app.listen(PORT, () => {
 
 
   - GET https://playerstats-api.herokuapp.com/api/v1/stats/23 
-    - This will get the stats for player 23
+    - Cela obtiendra les statistiques du joueur 23
 
     ```json
-    // it will return json file like this
+    // il renverra un fichier json comme celui-ci
       {
         "id": 23,
         "wins": 8,
@@ -126,17 +126,17 @@ app.listen(PORT, () => {
     ```
     
   - PUT https://playerstats-api.herokuapp.com/api/v1/stats/23 
-    - This will update the stats for player 101
+    - Cela mettra à jour les statistiques du joueur 101
 
     ```json
-    // this the input 
+    // c'est l'entrée
       {
         "id": 23,
         "wins": 10,
         "losses": 3,
         "points_scored": 7
       }
-    // and it will return json file like this
+    // il renverra un fichier json comme celui-ci
     {
         "id": 23,
         "wins": 10,
@@ -146,17 +146,17 @@ app.listen(PORT, () => {
     ```
 
   - DELETE https://playerstats-api.herokuapp.com/api/v1/stats/23
-    -  This will delete the stats for player 101
+    -  Cela supprimera les statistiques du joueur 101
 
     ```json
-    // this the input 
+    // c'est l'entrée 
       {
         "id": 101,
         "wins": 10,
         "losses": 3,
         "points_scored": 7
       }
-    // and it will return an empty json file
+    // et il renverra un fichier json vide
     ```
 
 
